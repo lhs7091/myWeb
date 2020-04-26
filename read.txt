@@ -23,8 +23,14 @@ def ...
  ->　모든 request가 끝나고 반환하기 전에 수행할 내용
  -> for example, db close..
 
-export FLASK_APP=myapp
-export FLASK_ENV=development
-flask run
+for mac
+    export FLASK_APP=myapp
+    export FLASK_ENV=development
+    flask run
 
-set FLASK_ENV=development
+for win
+    set FLASK_ENV=development
+
+for forms ans user input
+    pip install flask-wtf
+    pip install email_validator

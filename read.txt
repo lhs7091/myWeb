@@ -34,3 +34,6 @@ for win
 for forms ans user input
     pip install flask-wtf
     pip install email_validator
+
+for sql
+    pip install flask-sqlalchemy

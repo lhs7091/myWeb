@@ -39,3 +39,9 @@ for forms ans user input
 
 for sql
     pip install flask-sqlalchemy
+
+for bcrypt
+    pip install flask-bcrypt
+
+for user Authentication
+    pip install flask-login

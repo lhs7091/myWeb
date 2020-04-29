@@ -12,7 +12,7 @@
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Account Info</legend>
-                <dir class="form-group">
+                <div class="form-group">
                     {{ form.username.label(class="form-control-label") }}
                     {% if form.username.errors %}
                         {{ form.username(class="form-control form-control-lg is-invalid") }}
@@ -24,9 +24,9 @@
                     {% else %}
                         {{ form.username(class="form-control form-control-lg") }}
                     {% endif %}
-                </dir>
+                </div>
 
-                <dir class="form-group">
+                <div class="form-group">
                     {{ form.email.label(class="form-control-label") }}
                     {% if form.email.errors %}
                         {{ form.email(class="form-control form-control-lg is-invalid") }}
@@ -38,11 +38,20 @@
                     {% else %}
                         {{ form.email(class="form-control form-control-lg") }}
                     {% endif %}
-                </dir>
+                </div>
+                <div class="form-group">
+                    {{ form.picture.label() }}
+                    {{ form.picture(class="form-control-file") }}
+                    {% if form.picture.errors %}
+                        {% for error in form.picture.errors
+                            <span class="text-danger">{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
             </fieldset>
-            <dir class="form-group">
+            <div class="form-group">
                 {{ form.submit(class="btn btn-outline-info") }}
-            </dir>
+            </div>
         </form>
     </div>
 {% endblock content %}

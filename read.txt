@@ -45,3 +45,7 @@ for bcrypt
 
 for user Authentication
     pip install flask-login
+
+for image modification
+    pip install Pillow
+
